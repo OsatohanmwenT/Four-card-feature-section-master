@@ -1,0 +1,202 @@
+:root{
+--Red: hsl(0, 78%, 62%);
+--Cyan: hsl(180, 62%, 55%);
+--Orange: hsl(34, 97%, 64%);
+--Blue: hsl(212, 86%, 64%);
+--Very-Dark-Blue: hsl(234, 12%, 34%);
+--Grayish-Blue: hsl(229, 6%, 66%);
+--Very-Light-Gray: hsl(0, 0%, 98%);
+}
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    background-color: var(--Very-Light-Gray);
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+.wrapper{
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+    height: 100vh;
+    margin: 0px;
+    position: relative;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--Very-Light-Gray);
+}
+.wrapper .head{
+    text-align: center;
+    position: absolute;
+    top: 10px;
+}
+h4{
+    font-weight: 400;
+    font-size: 35px;
+    color: var(--Grayish-Blue);
+    margin-bottom: 5px;
+    font-weight: 200;
+}
+h3{
+    margin: 0;
+    color: var(--Very-Dark-Blue);
+    font-size: 35px;
+}
+p{
+    color: var(--Grayish-Blue);
+    margin-top: 10px;
+}
+span{
+    color: var(--Grayish-Blue);
+    font-size: 12px;
+}
+.wrapper .cards{
+    position: relative;
+    display: flex;
+    margin-top: 50px;
+}
+.wrapper .cards .card{
+    background-color: white;
+    width: 300px;
+    padding: 20px 24px;
+    position: absolute;
+    margin: 0;
+    border-radius: 0px 0px 10px 10px;
+}
+.wrapper .cards .card.super{
+    bottom: -100px;
+    left: 50px;
+    transform: translateX(-60%);
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    box-shadow: 17px 19px 12px rgba(185, 185, 185, 0.6);
+}
+.wrapper .cards .card.super .icon{
+   align-self: flex-end;
+}
+.wrapper .cards .card.team{
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    bottom: -200px;
+    right: 30px;
+    transform: translateX(-40%);
+    box-shadow: 7px 13px 12px rgba(185, 185, 185, 0.6);
+}
+.wrapper .cards .card.team .icon{
+  align-self: flex-end;
+}
+.wrapper .cards .header{
+    font-size: 18px;
+    color: var(--Very-Dark-Blue);
+    font-weight: 600;
+}
+.wrapper .cards .card.cal{
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  left: 40px;
+  transform: translateX(50%);
+  box-shadow: 8px 16px 12px rgba(185, 185, 185, 0.6);
+}
+.cards .cal::before{
+    content: "";
+    height: 4px;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    background: var(--Blue);
+    position: absolute;
+    border-radius: 4px 4px 0px 0px;
+}
+.cards .karma::before{
+    content: "";
+    height: 4px;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    background: var(--Orange);
+    position: absolute;
+    border-radius: 4px 4px 0px 0px;
+}
+.cards .super::before{
+    content: "";
+    height: 4px;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    background: var(--Cyan);
+    position: absolute;
+    border-radius: 4px 4px 0px 0px;
+}
+.cards .team::before{
+    content: "";
+    height: 4px;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    background: var(--Red);
+    position: absolute;
+    border-radius: 4px 4px 0px 0px;
+}
+.wrapper .cards .card.cal .icon{
+  align-self: flex-end;
+}
+.wrapper .cards .card.karma{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    bottom: -310px;
+    left: 50px;
+    transform: translateX(-60%);
+    box-shadow: 18px 16px 12px rgba(185, 185, 185, 0.6);
+}
+.wrapper .cards .card.karma .icon{
+    align-self: flex-end;
+}
+@media (max-width:500px) {
+    .wrapper{
+        height: fit-content;
+        align-items: center;
+        justify-content: center;
+    }
+    .wrapper .head{
+        position: relative;
+    }
+    .wrapper .cards{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .wrapper .card.super{
+        position: relative;
+        right: 0;
+        height: 200px;
+        top: 0;
+    }
+    .wrapper .card.team{
+        position: relative;
+        right: 0;
+        height: 200px;
+        top: 0;
+    }
+    .wrapper .card.cal{
+        position: relative;
+        right: 0;
+        height: 200px;
+        top: 0;
+    }
+    .wrapper .card.karma{
+        position: relative;
+        right: 0;
+        height: 200px;
+        top: 0;
+    }
+}
